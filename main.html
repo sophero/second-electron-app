@@ -18,6 +18,10 @@
         li.appendChild(text);
         list.appendChild(li);
       });
+
+      ipcRenderer.on('todo:clear', () => {
+        list.innerHTML = "";
+      });
     </script>
   </body>
 </html>
